@@ -1,0 +1,29 @@
+<!doctype html>
+	<html ng-app>
+	<head>
+		<meta charset="utf-8">
+	</head>
+	<body>
+	  <div ng-controller="HelloWorldController">
+	    <h1>Hello {{nome}}!</h1>
+	  </div>
+	  <h1>Hello {{nome}}!</h1>
+	  <div ng-controller="fnController">
+	  	<h1>{{ getMessage() }}</h1>	  	
+	  </div>
+
+	<script src="../angular.min.js"></script>
+	<script type="text/javascript">
+	function HelloWorldController($scope){
+		$scope.nome = "World";
+	}
+	</script>
+	<script type="text/javascript">
+		function fnController($scope){
+			$scope.getMessage = function(){
+				return "[Olá Mundo]";
+			};
+		}
+	</script>
+	</body>
+</html>

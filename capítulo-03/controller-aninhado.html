@@ -1,0 +1,27 @@
+<!-- controller-aninhado.html -->
+<!DOCTYPE html>
+<html ng-app>
+<head>
+	<title></title>
+	<meta charset="utf-8">
+</head>
+<body>
+	<div ng-controller="CarroController">
+		<b> [CarroController] </b> Tipo: {{tipo}} - Nome: {{nome}}
+		<div ng-controller="FuscaController">
+			<b> [FuscaController] </b> Tipo: {{tipo}} - Nome: {{nome}}
+		</div>
+		<b> [CarroController] </b> Tipo: {{tipo}} - Nome: {{nome}}
+	</div>
+	<script type="text/javascript" src="../angular.min.js"></script>
+	<script type="text/javascript">
+		function CarroController($scope){
+			$scope.tipo = "Carro";
+			$scope.nome = "Carro";
+		}
+		function FuscaController($scope){
+			$scope.nome = "Fusca";
+		}
+	</script>
+</body>
+</html>
